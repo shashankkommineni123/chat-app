@@ -1,7 +1,7 @@
 // @ts-nocheck
 
-const johnSelectorBtn = document.querySelector('#john-selector')
-const janeSelectorBtn = document.querySelector('#jane-selector')
+const shashankSelectorBtn = document.querySelector('#shashank-selector')
+const lohithSelectorBtn = document.querySelector('#lohith-selector')
 const chatHeader = document.querySelector('.chat-header')
 const chatMessages = document.querySelector('.chat-messages')
 const chatInputForm = document.querySelector('.chat-input-form')
@@ -24,28 +24,28 @@ window.onload = () => {
   })
 }
 
-let messageSender = 'John'
+let messageSender = 'shashank'
 
 const updateMessageSender = (name) => {
   messageSender = name
   chatHeader.innerText = `${messageSender} chatting...`
   chatInput.placeholder = `Type here, ${messageSender}...`
 
-  if (name === 'John') {
-    johnSelectorBtn.classList.add('active-person')
-    janeSelectorBtn.classList.remove('active-person')
+  if (name === 'shashank') {
+    shashankSelectorBtn.classList.add('active-person')
+    lohithSelectorBtn.classList.remove('active-person')
   }
-  if (name === 'Jane') {
-    janeSelectorBtn.classList.add('active-person')
-    johnSelectorBtn.classList.remove('active-person')
+  if (name === 'lohith') {
+    lohithSelectorBtn.classList.add('active-person')
+    shashankSelectorBtn.classList.remove('active-person')
   }
 
   /* auto-focus the input field */
   chatInput.focus()
 }
 
-johnSelectorBtn.onclick = () => updateMessageSender('John')
-janeSelectorBtn.onclick = () => updateMessageSender('Jane')
+shashankSelectorBtn.onclick = () => updateMessageSender('shashank')
+lohithSelectorBtn.onclick = () => updateMessageSender('lohith')
 
 const sendMessage = (e) => {
   e.preventDefault()
